@@ -55,6 +55,7 @@ L'utilisateur s'inscrit avec son email, et un email de vérification est envoyé
 
 Si l'utilisateur oublie son mot de passe, il peut demander une réinitialisation. 
 Un email avec un token de réinitialisation est envoyé, permettant de définir un nouveau mot de passe.
+
 <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Login%20Page.png" width="350" height="200"> 
 
 <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Forgot%20Password.png" width="350" height="200">
@@ -65,14 +66,13 @@ Un email avec un token de réinitialisation est envoyé, permettant de définir 
 
 L'application permet la création, la lecture, la mise à jour et la suppression des entités.
 
-- **Liste des entités** :
-- 
+ **Liste des entités** :
+  
   <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Users.png" width="350" height="200">
 
-- **Édition d'une entité** :
-- 
+ **Édition d'une entité** :
+  
    <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Update%20Page.png" width="350" height="200">
-
 
 ## Technologies
 
