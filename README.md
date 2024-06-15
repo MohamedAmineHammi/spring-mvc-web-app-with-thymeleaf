@@ -42,33 +42,34 @@ Cette application web Java Full-Stack utilise Spring Boot, Spring Security, Thym
 
 ## Utilisation
 
+### Home Page
+<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Home.png" width="350" height="200"> 
+
 ### Inscription et Vérification par Email
 
 L'utilisateur s'inscrit avec son email, et un email de vérification est envoyé. Une fois l'email vérifié, l'utilisateur peut se connecter.
 
-![Inscription](captures/inscription.png)
-![Email de vérification](captures/email_verification.png)
+<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Registration%20Page.png" width="350" height="200"> <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Email%20Verification%20Registrtion.png" width="350" height="200">
 
-### Réinitialisation de Mot de Passe
+### Login et Réinitialisation de Mot de Passe
 
 Si l'utilisateur oublie son mot de passe, il peut demander une réinitialisation. Un email avec un token de réinitialisation est envoyé, permettant de définir un nouveau mot de passe.
+<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Login%20Page.png" width="350" height="200"> 
 
-![Mot de passe oublié](captures/forgot_password.png)
-![Email de réinitialisation](captures/reset_email.png)
-![Réinitialisation de mot de passe](captures/reset_password.png)
+![Mot de passe oublié]<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Forgot%20Password.png" width="350" height="200">
+![Email de réinitialisation]<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Email%20Verification%20Reset%20password.png" width="350" height="200">
+![Réinitialisation de mot de passe]<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Reset%20Paswword.png" width="350" height="200">
 
 ### Gestion des Entités (CRUD)
 
 L'application permet la création, la lecture, la mise à jour et la suppression des entités.
 
 - **Liste des entités** :
-    ![Liste des entités](captures/list.png)
-- **Création d'une entité** :
-    ![Création d'une entité](captures/create.png)
+    ![Liste des entités]<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Users.png" width="350" height="200">
+
 - **Édition d'une entité** :
-    ![Édition d'une entité](captures/edit.png)
-- **Suppression d'une entité** :
-    ![Suppression d'une entité](captures/delete.png)
+    ![Édition d'une entité]<img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Update%20Page.png" width="350" height="200">
+
 
 ## Technologies
 
@@ -95,6 +96,5 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
 ## Contact
 
-Votre Nom - [Votre Email](mailto:votre-email@example.com)
+Mohamed Amine Hammi - eminehammi@gmail.com
 
-Lien du projet : [https://github.com/votre-utilisateur/votre-repo](https://github.com/votre-utilisateur/votre-repo)
