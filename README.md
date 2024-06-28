@@ -74,7 +74,7 @@ L'application permet la création, la lecture, la mise à jour et la suppression
   
    <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/templates/Update%20Page.png" width="350" height="200">
 
-    **Changer Mot de Passe** :
+**Changer Mot de Passe**
   
    <img src="https://github.com/MohamedAmineHammi/spring-mvc-web-app-with-thymeleaf/blob/master/Update%20Password.png" width="350" height="200">
 
