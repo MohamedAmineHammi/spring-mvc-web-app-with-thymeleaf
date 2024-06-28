@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments :: boots_trap">
   <meta charset="UTF-8">
   <title> Users</title>
@@ -15,6 +15,7 @@
       A User has been deleted successfully.
     </div>
   </div>
+
   <div th:switch="${users}">
     <h2 th:case="null">There are no users to display</h2>
     <div th:case="*">
@@ -40,7 +41,21 @@
       </table>
     </div>
     <p><a href="#" th:href="@{/registration/registration-form}" class="btn btn-info">Add a new user</a> </p>
+
   </div>
+
+  <!-- .stretched-link class will work properly only if it's parent element gets position: relative; or some transform property -->
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Security Configuration</h5>
+      <p class="card-text">If you need to moe secure your account visit Security Configurations.</p>
+      <a href="/registration/change-password" class="btn btn-primary stretched-link">Go Configuration</a>
+    </div>
+  </div>
+
+
+
 </div>
+
 </body>
 </html>

@@ -2,7 +2,7 @@ package com.dailycodework.sbend2endapplication.registration;
 import com.dailycodework.sbend2endapplication.event.RegistrationCompleteEvent;
 import com.dailycodework.sbend2endapplication.event.listener.RegistrationCompleteEventListener;
 import com.dailycodework.sbend2endapplication.registration.password.IPasswordResetTokenService;
-import com.dailycodework.sbend2endapplication.registration.password.PasswordResetTokenService;
+import com.dailycodework.sbend2endapplication.registration.password.PasswordRequestUtil;
 import com.dailycodework.sbend2endapplication.registration.token.VerificationToken;
 import com.dailycodework.sbend2endapplication.registration.token.VerificationTokenService;
 import com.dailycodework.sbend2endapplication.user.IUserService;
@@ -99,9 +99,28 @@ public class RegistrationController {
         }
         Optional<User> theUser = passwordResetTokenService.findUserByPasswordResetToken(theToken);
         if (theUser.isPresent()){
-            passwordResetTokenService.resetPassword(theUser.get(), password);
+            passwordResetTokenService.changePassword(theUser.get(), password);
             return "redirect:/login?reset_success";
         }
         return "redirect:/error?not_found";
     }
+
+    @GetMapping("/change-password")
+    public String showChangePasswordForm(Model model) {
+        model.addAttribute("passwordChangeRequest", new PasswordRequestUtil());
+        return "change-password-form";
+    }
+
+    @PostMapping("/change-password")
+    public String changePassword(@ModelAttribute("passwordChangeRequest") PasswordRequestUtil passwordChangeRequest, Model model) {
+        Optional<User> user = userService.findByEmail(passwordChangeRequest.getEmail());
+        if (user.isEmpty() || !userService.checkIfValidOldPassword(user.get(), passwordChangeRequest.getOldPassword())) {
+            model.addAttribute("error", "Invalid old password");
+            return "change-password-form";
+        }
+        userService.changePassword(user.get(), passwordChangeRequest.getNewPassword());
+        return "redirect:/";
+    }
+
+
 }

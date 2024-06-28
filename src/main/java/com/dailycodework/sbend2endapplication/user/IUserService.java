@@ -20,4 +20,7 @@ public interface IUserService {
     void updateUser(Long id, String firstName, String lastName, String email);
 
     void deleteUser(Long id);
+
+    boolean checkIfValidOldPassword(User user, String oldPassword);
+    void changePassword(User user, String newPassword);
 }

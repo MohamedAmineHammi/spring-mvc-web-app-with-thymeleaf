@@ -57,4 +57,16 @@ public class UserService implements IUserService {
         theUser.ifPresent(user -> verificationTokenService.deleteUserToken(user.getId()));
         userRepository.deleteById(id);
     }
+
+    @Override
+    public boolean checkIfValidOldPassword(User user, String oldPassword) {
+        return passwordEncoder.matches(oldPassword, user.getPassword());
+    }
+
+    @Override
+    public void changePassword(User user, String newPassword) {
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+
+    }
 }

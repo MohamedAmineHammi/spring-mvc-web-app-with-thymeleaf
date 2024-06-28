@@ -38,7 +38,7 @@ public class PasswordResetTokenService implements IPasswordResetTokenService {
     }
 
     @Override
-    public void resetPassword(User theUser, String newPassword) {
+    public void changePassword(User theUser, String newPassword) {
         theUser.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(theUser);
     }
@@ -51,4 +51,11 @@ public class PasswordResetTokenService implements IPasswordResetTokenService {
         PasswordResetToken resetToken = new PasswordResetToken(passwordResetToken, user);
         passwordResetTokenRepository.save(resetToken);
     }
+
+    @Override
+    public boolean oldPasswordIsValid(User user, String oldPassword) {
+        return false;
+    }
+
+
 }
